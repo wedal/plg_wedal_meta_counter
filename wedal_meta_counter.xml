@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>System - Wedal Meta Counter</name>
+	<creationDate>2018</creationDate>
+	<author>Wedal</author>
+	<authorUrl>http://wedal.ru</authorUrl>
+	<copyright>Copyright (C) 2018. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>PLG_WEDAL_META_COUNTER_DESCRIPTION</description>
+	<files>
+		<filename plugin="wedal_meta_counter">wedal_meta_counter.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_wedal_meta_counter.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_wedal_meta_counter.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_wedal_meta_counter.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_wedal_meta_counter.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="title_length"
+					type="number"
+					default="60"
+					hint="60"
+					label="PLG_WEDAL_META_COUNTER_TITLE_LENGTH"
+					min="1"
+					step="1"
+					filter="integer"
+					required= "true"
+				/>
+
+				<field
+					name="desc_length"
+					type="number"
+					default="160"
+					hint="160"
+					label="PLG_WEDAL_META_COUNTER_DESC_LENGTH"
+					min="1"
+					step="1"
+					filter="integer"
+					required= "true"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" enabled="1" element="plg_wedal_meta_counter" name="Wedal Meta Counter">https://raw.githubusercontent.com/wedal/plg_wedal_meta_counter/master/update.xml</server>
+	</updateservers>
+
+</extension>
