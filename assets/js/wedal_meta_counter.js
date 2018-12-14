@@ -8,6 +8,7 @@
         var m_title_badge = [];
         var m_desc_badge = [];
         var badge;
+        var label_color;
 
         if(plg_system_wedal_meta_counter_params.params.title_length > 0) {
             m_title_max = plg_system_wedal_meta_counter_params.params.title_length;
@@ -31,8 +32,13 @@
                 field_length = m_title_max;
             } else {
                 field_length = m_title_max - field_length;
+                if (field_length < 0) {
+                    label_color = 'label-important';
+                } else {
+                    label_color = 'label-success';
+                }
             }
-            badge = '<span style="margin-left: 5px;" class="label label-success hasTooltip" title="" data-original-title="'+plg_system_wedal_meta_counter_params.PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT+'">'+field_length+'</span>';
+            badge = '<span style="margin-left: 5px;" class="label '+label_color+' hasTooltip" title="" data-original-title="'+plg_system_wedal_meta_counter_params.PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT+'">'+field_length+'</span>';
             m_title[i].after(badge);
             m_title_badge[i] = m_title[i].next('.label');
             CharsCounter (m_title[i], m_title_max, m_title_badge[i]);
@@ -45,8 +51,13 @@
                 field_length = m_desc_max;
             } else {
                 field_length = m_desc_max - field_length;
+                if (field_length < 0) {
+                    label_color = 'label-important';
+                } else {
+                    label_color = 'label-success';
+                }
             }
-            badge = '<span style="margin-left: 5px;" class="label label-success hasTooltip" title="" data-original-title="'+plg_system_wedal_meta_counter_params.PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT+'">'+field_length+'</span>';
+            badge = '<span style="margin-left: 5px;" class="label '+label_color+' hasTooltip" title="" data-original-title="'+plg_system_wedal_meta_counter_params.PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT+'">'+field_length+'</span>';
             m_desc[i].after(badge);
             m_desc_badge[i] = m_desc[i].next('.label');
             CharsCounter (m_desc[i], m_desc_max, m_desc_badge[i]);
