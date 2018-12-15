@@ -8,7 +8,7 @@
         var m_title_badge = [];
         var m_desc_badge = [];
         var badge;
-        var label_color;
+        var label_color = 'label-success';
 
         if(plg_system_wedal_meta_counter_params.params.title_length > 0) {
             m_title_max = plg_system_wedal_meta_counter_params.params.title_length;
