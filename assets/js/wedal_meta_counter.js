@@ -22,20 +22,25 @@
         m_title[1] = $('.com_menus.view-item #jform_params_page_title');
         m_title[2] = $('.com_content.view-article #jform_title');
         m_title[3] = $('.com_content.view-article #jform_attribs_article_page_title');
-		m_title[4] = $('.com_jshopping input[name="name_ru-RU"]');
-		m_title[5] = $('.com_jshopping input[name="name_en-GB"]');
+	m_title[4] = $('.com_jshopping input[name="name_ru-RU"]');
+	m_title[5] = $('.com_jshopping input[name="name_en-GB"]');
         m_title[6] = $('.com_jshopping input[name="meta_title_en-GB"]');
-		m_title[7] = $('.com_jshopping input[name="meta_title_ru-RU"]');
+	m_title[7] = $('.com_jshopping input[name="meta_title_ru-RU"]');
+	m_title[8] = $('.com_virtuemart #category_name');
+	m_title[9] = $('.com_virtuemart #customtitle');
+	m_title[9] = $('.com_virtuemart #product_name');
 		
 		
 		
 
         m_desc[0] = $('.com_menus.view-item #jform_params_menu_meta_description');
         m_desc[1] = $('.com_content.view-article #jform_metadesc');
-		m_desc[2] = $('.com_jshopping textarea[name="short_description_en-GB"]');
-		m_desc[3] = $('.com_jshopping textarea[name="short_description_ru-RU"]');
-		m_desc[4] = $('.com_jshopping input[name="meta_description_en-GB"]');
-		m_desc[5] = $('.com_jshopping input[name="meta_description_ru-RU"]');
+	m_desc[2] = $('.com_jshopping textarea[name="short_description_en-GB"]');
+	m_desc[3] = $('.com_jshopping textarea[name="short_description_ru-RU"]');
+	m_desc[4] = $('.com_jshopping input[name="meta_description_en-GB"]');
+	m_desc[5] = $('.com_jshopping input[name="meta_description_ru-RU"]');
+	m_desc[6] = $('.com_virtuemart #metadesc');
+	m_desc[7] = $('.com_virtuemart #product_s_desc');
 
         $.each(m_title, function(i) {
             field_length = (m_title[i].val() || '').length;
