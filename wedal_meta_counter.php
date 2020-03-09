@@ -22,12 +22,13 @@ class plgSystemWedal_Meta_Counter extends JPlugin {
 		$jinput = JFactory::getApplication()->input;
 		$option = $jinput->get('option');
 		$view = $jinput->get('view');
+		$task = $jinput->get('task');
 
-		if ($option !== 'com_content' && $option !== 'com_menus') {
+		if ($option !== 'com_content' && $option !== 'com_menus' && $option !== 'com_jshopping') {
 			return;
 		}
 
-		if ($view !== 'item' && $view !== 'article') {
+		if ($view !== 'item' && $view !== 'article' && $task !== 'edit') {
 			return;
 		}
 
