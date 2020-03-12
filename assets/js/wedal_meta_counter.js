@@ -28,7 +28,7 @@
 	m_title[7] = $('.com_jshopping input[name="meta_title_ru-RU"]');
 	m_title[8] = $('.com_virtuemart #category_name');
 	m_title[9] = $('.com_virtuemart #customtitle');
-	m_title[9] = $('.com_virtuemart #product_name');
+	m_title[10] = $('.com_virtuemart #product_name');
 		
 		
 		
