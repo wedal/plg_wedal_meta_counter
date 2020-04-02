@@ -23,14 +23,21 @@ class plgSystemWedal_Meta_Counter extends JPlugin {
 		$option = $jinput->get('option');
 		$view = $jinput->get('view');
 		$task = $jinput->get('task');
+		$controller = $jinput->get('controller');
 
+		//Component filter
 		if ($option !== 'com_content' && $option !== 'com_menus' && $option !== 'com_jshopping' && $option !== 'com_virtuemart') {
 			return;
 		}
 
-		if ($view !== 'item' && $view !== 'article' && $task !== 'edit') {
+		//page params filter
+		if ($view !== 'item' && $view !== 'article' && $view !== 'category' && $view !== 'product' &&  $task !== 'edit') {
 			return;
 		}
+
+
+
+
 
 		$plg_params['params'] = $this->params;
 		$plg_params['PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT'] = JText::_('PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT');

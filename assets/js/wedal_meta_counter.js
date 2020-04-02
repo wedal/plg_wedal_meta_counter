@@ -18,32 +18,27 @@
             m_desc_max = plg_system_wedal_meta_counter_params.params.desc_length;
         }
 
-        m_title[0] = $('.com_menus.view-item #jform_title');
-        m_title[1] = $('.com_menus.view-item #jform_params_page_title');
-        m_title[2] = $('.com_content.view-article #jform_title');
-        m_title[3] = $('.com_content.view-article #jform_attribs_article_page_title');
-	m_title[4] = $('.com_jshopping input[name="name_ru-RU"]');
-	m_title[5] = $('.com_jshopping input[name="name_en-GB"]');
-        m_title[6] = $('.com_jshopping input[name="meta_title_en-GB"]');
-	m_title[7] = $('.com_jshopping input[name="meta_title_ru-RU"]');
-	m_title[8] = $('.com_virtuemart #category_name');
-	m_title[9] = $('.com_virtuemart #customtitle');
-	m_title[10] = $('.com_virtuemart #product_name');
-		
-		
-		
+        // Joomla title
+        m_title.push($('.com_menus.view-item #jform_title'));
+        m_title.push($('.com_menus.view-item #jform_params_page_title'));
+        m_title.push($('.com_content.view-article #jform_title'));
+        m_title.push($('.com_content.view-article #jform_attribs_article_page_title'));
 
-        m_desc[0] = $('.com_menus.view-item #jform_params_menu_meta_description');
-        m_desc[1] = $('.com_content.view-article #jform_metadesc');
-	m_desc[2] = $('.com_jshopping textarea[name="short_description_en-GB"]');
-	m_desc[3] = $('.com_jshopping textarea[name="short_description_ru-RU"]');
-	m_desc[4] = $('.com_jshopping input[name="meta_description_en-GB"]');
-	m_desc[5] = $('.com_jshopping input[name="meta_description_ru-RU"]');
-	m_desc[6] = $('.com_virtuemart #metadesc');
-	m_desc[7] = $('.com_virtuemart #product_s_desc');
+        // Virtuemart title support
+    	m_title.push($('.virtuemart-admin-area #adminForm input#category_name'));
+    	m_title.push($('.virtuemart-admin-area #adminForm input#customtitle'));
+    	m_title.push($('.virtuemart-admin-area #adminForm input#product_name'));
+
+
+        // Joomla meta-desc
+        m_desc.push($('.com_menus.view-item #jform_params_menu_meta_description'));
+        m_desc.push($('.com_content.view-article #jform_metadesc'));
+
+        // Virtuemart meta-desc support
+    	m_desc.push($('.virtuemart-admin-area #adminForm #metadesc'));
 
         $.each(m_title, function(i) {
-            field_length = (m_title[i].val() || '').length;
+            field_length = ($(this).val() || '').length;
             if (field_length == 0) {
                 field_length = m_title_max;
             } else {
@@ -55,14 +50,14 @@
                 }
             }
             badge = '<span style="margin-left: 5px;" class="label '+label_color+' hasTooltip" title="" data-original-title="'+plg_system_wedal_meta_counter_params.PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT+'">'+field_length+'</span>';
-            m_title[i].after(badge);
-            m_title_badge[i] = m_title[i].next('.label');
-            CharsCounter (m_title[i], m_title_max, m_title_badge[i]);
+            $(this).after(badge);
+            m_title_badge[i] = $(this).next('.label');
+            CharsCounter ($(this), m_title_max, m_title_badge[i]);
         });
 
 
         $.each(m_desc, function(i) {
-            field_length = (m_desc[i].val() || '').length;
+            field_length = ($(this).val() || '').length;
             if (field_length == 0) {
                 field_length = m_desc_max;
             } else {
@@ -74,9 +69,9 @@
                 }
             }
             badge = '<span style="margin-left: 5px;" class="label '+label_color+' hasTooltip" title="" data-original-title="'+plg_system_wedal_meta_counter_params.PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT+'">'+field_length+'</span>';
-            m_desc[i].after(badge);
-            m_desc_badge[i] = m_desc[i].next('.label');
-            CharsCounter (m_desc[i], m_desc_max, m_desc_badge[i]);
+            $(this).after(badge);
+            m_desc_badge[i] = $(this).next('.label');
+            CharsCounter ($(this), m_desc_max, m_desc_badge[i]);
         });
 
     });
