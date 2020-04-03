@@ -3,9 +3,9 @@
 	<update>
 		<name>Wedal Meta Counter</name>
 		<description>MOD_WEDAL_META_COUNTER_DESCRIPTION</description>
-		<element>mod_wedal_meta_counter</element>
+		<element>wedal_meta_counter</element>
 		<type>plugin</type>
-		<version>1.1.0</version>
+		<version>1.1.1</version>
 		<client>site</client>
 		<infourl title="Wedal Meta Counter">https://github.com/wedal/plg_wedal_meta_counter</infourl>
 		<downloads>
