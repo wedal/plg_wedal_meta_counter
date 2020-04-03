@@ -21,6 +21,7 @@
         // Joomla title
         m_title.push($('.com_menus.view-item #jform_title'));
         m_title.push($('.com_menus.view-item #jform_params_page_title'));
+        m_title.push($('.com_categories.view-category #jform_title'));
         m_title.push($('.com_content.view-article #jform_title'));
         m_title.push($('.com_content.view-article #jform_attribs_article_page_title'));
 
@@ -29,9 +30,9 @@
     	m_title.push($('.virtuemart-admin-area #adminForm input#customtitle'));
     	m_title.push($('.virtuemart-admin-area #adminForm input#product_name'));
 
-
         // Joomla meta-desc
         m_desc.push($('.com_menus.view-item #jform_params_menu_meta_description'));
+        m_desc.push($('.com_categories.view-category #jform_metadesc'));
         m_desc.push($('.com_content.view-article #jform_metadesc'));
 
         // Virtuemart meta-desc support
