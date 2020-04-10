@@ -24,11 +24,13 @@ class plgSystemWedal_Meta_Counter extends JPlugin {
 		$view = $jinput->get('view');
 		$task = $jinput->get('task');
 
-		if ($option !== 'com_content' && $option !== 'com_menus' && $option !== 'com_jshopping' && $option !== 'com_virtuemart') {
+		//Component filter
+		if ($option !== 'com_content' && $option !== 'com_categories'  && $option !== 'com_menus' && $option !== 'com_jshopping' && $option !== 'com_virtuemart') {
 			return;
 		}
 
-		if ($view !== 'item' && $view !== 'article' && $task !== 'edit') {
+		//page params filter
+		if ($view !== 'item' && $view !== 'article' && $view !== 'category' && $view !== 'product' &&  $task !== 'edit') {
 			return;
 		}
 
