@@ -1,4 +1,11 @@
-<?php if (!defined('_JEXEC')) die('Direct Access to ' . basename(__FILE__) . ' is not allowed.');
+<?php 
+/*
+* @Author Wedal
+* @Url https://wedal.ru
+* @License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
+* @Version 1.1.2
+*/
+if (!defined('_JEXEC')) die('Direct Access to ' . basename(__FILE__) . ' is not allowed.');
 
 class plgSystemWedal_Meta_Counter extends JPlugin {
 

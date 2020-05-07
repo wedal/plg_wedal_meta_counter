@@ -26,11 +26,11 @@
         m_title.push($('.com_content.view-article #jform_attribs_article_page_title'));
 
         // Virtuemart title support
-    	m_title.push($('.virtuemart-admin-area #adminForm input#category_name'));
-    	m_title.push($('.virtuemart-admin-area #adminForm input#customtitle'));
-    	m_title.push($('.virtuemart-admin-area #adminForm input#product_name'));
+        m_title.push($('.virtuemart-admin-area #adminForm input#category_name'));
+        m_title.push($('.virtuemart-admin-area #adminForm input#customtitle'));
+        m_title.push($('.virtuemart-admin-area #adminForm input#product_name'));
 
-    	//JoomShopping title support
+    	  //JoomShopping title support
         $('.com_jshopping.task-edit input[name*=name_]').each(function(){
             m_title.push(this);
         });
@@ -38,15 +38,13 @@
             m_title.push(this);
         });
 
-
         // Joomla meta-desc
         m_desc.push($('.com_menus.view-item #jform_params_menu_meta_description'));
         m_desc.push($('.com_categories.view-category #jform_metadesc'));
         m_desc.push($('.com_content.view-article #jform_metadesc'));
 
-
         // Virtuemart meta-desc support
-    	m_desc.push($('.virtuemart-admin-area #adminForm #metadesc'));
+    	  m_desc.push($('.virtuemart-admin-area #adminForm #metadesc'));
 
         //JoomShopping meta-desc support
         $('.com_jshopping.task-edit textarea[name*=short_description_]').each(function(){
@@ -55,7 +53,6 @@
         $('.com_jshopping.task-edit input[name*=meta_description_]').each(function(){
             m_desc.push(this);
         });
-
 
         $.each(m_title, function(i) {
             field_length = ($(this).val() || '').length;

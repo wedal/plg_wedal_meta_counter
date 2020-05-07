@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
 	<update>
@@ -5,7 +6,7 @@
 		<description>MOD_WEDAL_META_COUNTER_DESCRIPTION</description>
 		<element>mod_wedal_meta_counter</element>
 		<type>plugin</type>
-		<version>1.0.1</version>
+		<version>1.1.2</version>
 		<client>site</client>
 		<infourl title="Wedal Meta Counter">https://github.com/wedal/plg_wedal_meta_counter</infourl>
 		<downloads>
