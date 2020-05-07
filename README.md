@@ -18,8 +18,8 @@
 	<li>Материалов Joomla</li>
 	<li>Категорий Joomla</li>
 	<li>Пунктов меню Joomla</li>
-	<li>Товаров Virtuemart</li>
-	<li>Категорий товаров Virtuemart</li>
+	<li>Товаров Virtuemart и JoomShopping</li>
+	<li>Категорий товаров Virtuemart и JoomShopping</li>
 </ul>
 <h2>Настройки Wedal Meta Counter</h2>
 <p>Плагин имеет всего две настройки. Они позволяют вам самостоятельно задать рекомендуемый размер для Title и Meta Description. По умолчанию заданы размеры <strong>60 и 160 символов</strong> соответственно.</p>
