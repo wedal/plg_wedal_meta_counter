@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 * @Author Wedal
 * @Url https://wedal.ru
@@ -30,14 +30,26 @@ class plgSystemWedal_Meta_Counter extends JPlugin {
 		$option = $jinput->get('option');
 		$view = $jinput->get('view');
 		$task = $jinput->get('task');
+		$controller = $jinput->get('controller');
 
-		//Component filter
-		if ($option !== 'com_content' && $option !== 'com_categories'  && $option !== 'com_menus' && $option !== 'com_jshopping' && $option !== 'com_virtuemart') {
-			return;
+		$execute = false;
+
+		// Joomla support
+		if (($option == 'com_content' && $view == 'article') || ($option == 'com_categories' && $view == 'category') || ($option == 'com_menus' && $view == 'item')) {
+			$execute = true;
 		}
 
-		//page params filter
-		if ($view !== 'item' && $view !== 'article' && $view !== 'category' && $view !== 'product' &&  $task !== 'edit') {
+		// Virtuemart support
+		if ($option == 'com_virtuemart' && ($view == 'category' || $view == 'product')) {
+			$execute = true;
+		}
+
+		// JoomShopping support
+		if ($option == 'com_jshopping' && ($controller == 'categories' || $controller == 'products')) {
+			$execute = true;
+		}
+
+		if (!$execute) {
 			return;
 		}
 
