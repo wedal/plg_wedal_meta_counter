@@ -3,11 +3,13 @@
 * @Author Wedal
 * @Url https://wedal.ru
 * @License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
-* @Version 1.1.2
+* @Version 1.2.0
 */
-if (!defined('_JEXEC')) die('Direct Access to ' . basename(__FILE__) . ' is not allowed.');
+if (!defined('_JEXEC')) die('Direct Access is not allowed.');
+use Joomla\CMS\Factory;
+use Joomla\CMS\Plugin\CMSPlugin;
 
-class plgSystemWedal_Meta_Counter extends JPlugin {
+class plgSystemWedal_Meta_Counter extends CMSPlugin {
 
 	protected $autoloadLanguage = true;
 
@@ -17,16 +19,16 @@ class plgSystemWedal_Meta_Counter extends JPlugin {
 
 	function onBeforeRender() {
 
-		if(!JFactory::getApplication()->isAdmin()) {
+		if(!Factory::getApplication()->isClient('administrator')) {
 			return;
 		}
 
-		if (JFactory::getDocument()->getType() !== 'html')
+		if (Factory::getDocument()->getType() !== 'html')
 		{
 			return;
 		}
 
-		$jinput = JFactory::getApplication()->input;
+		$jinput = Factory::getApplication()->input;
 		$option = $jinput->get('option');
 		$view = $jinput->get('view');
 		$task = $jinput->get('task');
@@ -56,9 +58,9 @@ class plgSystemWedal_Meta_Counter extends JPlugin {
 		$plg_params['params'] = $this->params;
 		$plg_params['PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT'] = JText::_('PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT');
 
-		$document = JFactory::getDocument();
+		$document = Factory::getDocument();
 		$document->addScript('/plugins/'.$this->_type.'/'.$this->_name.'/assets/js/wedal_meta_counter.js');
-		$js= 'var plg_system_wedal_meta_counter_params = '.json_encode($plg_params).';';
+		$js= 'let plg_system_wedal_meta_counter_params = '.json_encode($plg_params).';';
 		$document->addScriptDeclaration($js);
 	}
 }

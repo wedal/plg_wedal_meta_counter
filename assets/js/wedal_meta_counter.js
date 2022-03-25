@@ -8,7 +8,7 @@
         var m_title_badge = [];
         var m_desc_badge = [];
         var badge;
-        var label_color = 'label-success';
+        var label_color = 'badge-success bg-success';
 
         if(plg_system_wedal_meta_counter_params.params.title_length > 0) {
             m_title_max = plg_system_wedal_meta_counter_params.params.title_length;
@@ -65,14 +65,14 @@
             } else {
                 field_length = m_title_max - field_length;
                 if (field_length < 0) {
-                    label_color = 'label-important';
+                    label_color = 'badge-important bg-danger';
                 } else {
-                    label_color = 'label-success';
+                    label_color = 'badge-success bg-success';
                 }
             }
-            badge = '<span style="margin-left: 5px;" class="label '+label_color+' hasTooltip" title="" data-original-title="'+plg_system_wedal_meta_counter_params.PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT+'">'+field_length+'</span>';
+            badge = '<span style="margin-left: 5px;" class="badge '+label_color+' hasTooltip" title="" data-original-title="'+plg_system_wedal_meta_counter_params.PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT+'">'+field_length+'</span>';
             $(this).after(badge);
-            m_title_badge[i] = $(this).next('.label');
+            m_title_badge[i] = $(this).next('.badge');
             CharsCounter ($(this), m_title_max, m_title_badge[i]);
         });
 
@@ -84,14 +84,14 @@
             } else {
                 field_length = m_desc_max - field_length;
                 if (field_length < 0) {
-                    label_color = 'label-important';
+                    label_color = 'label-important bg-danger';
                 } else {
-                    label_color = 'label-success';
+                    label_color = 'label-success bg-success';
                 }
             }
-            badge = '<span style="margin-left: 5px;" class="label '+label_color+' hasTooltip" title="" data-original-title="'+plg_system_wedal_meta_counter_params.PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT+'">'+field_length+'</span>';
+            badge = '<span style="margin-left: 5px;" class="badge '+label_color+' hasTooltip" title="" data-original-title="'+plg_system_wedal_meta_counter_params.PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT+'">'+field_length+'</span>';
             $(this).after(badge);
-            m_desc_badge[i] = $(this).next('.label');
+            m_desc_badge[i] = $(this).next('.badge');
             CharsCounter ($(this), m_desc_max, m_desc_badge[i]);
         });
 
