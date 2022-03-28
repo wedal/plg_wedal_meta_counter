@@ -84,9 +84,9 @@
             } else {
                 field_length = m_desc_max - field_length;
                 if (field_length < 0) {
-                    label_color = 'label-important bg-danger';
+                    label_color = 'badge-important bg-danger';
                 } else {
-                    label_color = 'label-success bg-success';
+                    label_color = 'badge-success bg-success';
                 }
             }
             badge = '<span style="margin-left: 5px;" class="badge '+label_color+' hasTooltip" title="" data-original-title="'+plg_system_wedal_meta_counter_params.PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT+'">'+field_length+'</span>';
@@ -103,11 +103,11 @@
             var num = max - count;
             $(CountedBage).text(num);
             if (num > -1) {
-                $(CountedBage).removeClass('label-important');
-                $(CountedBage).addClass('label-success');
+                $(CountedBage).removeClass('badge-important');
+                $(CountedBage).addClass('badge-success');
             } else {
-                $(CountedBage).removeClass('label-success');
-                $(CountedBage).addClass('label-important');
+                $(CountedBage).removeClass('badge-success');
+                $(CountedBage).addClass('badge-important');
             }
         });
 
@@ -116,11 +116,11 @@
             var num = max - count;
             $(CountedBage).text(num);
             if (num > -1) {
-                $(CountedBage).removeClass('label-important');
-                $(CountedBage).addClass('label-success');
+                $(CountedBage).removeClass('badge-important');
+                $(CountedBage).addClass('badge-success');
             } else {
-                $(CountedBage).removeClass('label-success');
-                $(CountedBage).addClass('label-important');
+                $(CountedBage).removeClass('badge-success');
+                $(CountedBage).addClass('badge-important');
             }
         });
     }

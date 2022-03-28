@@ -6,7 +6,7 @@
 		<element>wedal_meta_counter</element>
 		<folder>system</folder>
 		<type>plugin</type>
-		<version>1.1.2</version>
+		<version>1.2.1</version>
 		<client>0</client>
 		<infourl title="Wedal Meta Counter">https://github.com/wedal/plg_wedal_meta_counter</infourl>
 		<downloads>
@@ -15,6 +15,6 @@
 		<tags>
 			<tag>stable</tag>
 		</tags>
-		<targetplatform name="joomla" version="3.[23456789]" />
+		<targetplatform name="joomla" version="((3\.(8|9|10))|(4\.(0|1)))" /> 
 	</update>
 </updates>
