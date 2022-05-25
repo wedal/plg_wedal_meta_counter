@@ -6,7 +6,7 @@
 	<authorUrl>https://wedal.ru</authorUrl>
 	<copyright>Copyright (C) 2022. All rights reserved</copyright>
 	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
-	<version>1.2.1</version>
+	<version>1.2.2</version>
 	<description>PLG_WEDAL_META_COUNTER_DESCRIPTION</description>
 	<files>
 		<filename plugin="wedal_meta_counter">wedal_meta_counter.php</filename>

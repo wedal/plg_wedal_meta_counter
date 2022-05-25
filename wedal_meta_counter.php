@@ -3,11 +3,12 @@
 * @Author Wedal
 * @Url https://wedal.ru
 * @License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
-* @Version 1.2.0
+* @Version 1.2.2
 */
 if (!defined('_JEXEC')) die('Direct Access is not allowed.');
 use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\CMSPlugin;
+use Joomla\CMS\HTML\HTMLHelper;
 
 class plgSystemWedal_Meta_Counter extends CMSPlugin {
 
@@ -58,6 +59,7 @@ class plgSystemWedal_Meta_Counter extends CMSPlugin {
 		$plg_params['params'] = $this->params;
 		$plg_params['PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT'] = JText::_('PLG_WEDAL_META_COUNTER_CHARACTERS_LEFT');
 
+		HTMLHelper::_('jquery.framework');
 		$document = Factory::getDocument();
 		$document->addScript('/plugins/'.$this->_type.'/'.$this->_name.'/assets/js/wedal_meta_counter.js');
 		$js= 'let plg_system_wedal_meta_counter_params = '.json_encode($plg_params).';';
